@@ -1,11 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import Form from './Form';
 import Card from './Card'
 
-const Main = () => {
+const Main = ({setEmail}) => {
+  const [formResults, setFormResults] = useState({
+    name: "",
+    email: "",
+    img_url: "",
+    age: "",
+  });
+
   return <section>
-    <Form/>
-    <Card/>
+    <Form setFormResults={setFormResults} setEmail={setEmail}/>
+    <Card formResults={formResults}/>
   </section>
 };
 

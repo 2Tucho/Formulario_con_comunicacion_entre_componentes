@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useContext, useState } from "react";
+import { FormContext } from "../../context/FormContext";
 
 const Header = () => {
-  return <div>Header</div>;
+  const {email} = useContext(FormContext)
+
+  return <div>
+    <p>Email: {email}</p>
+  </div>;
 };
 
 export default Header;
