@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 const Card = (formResults) => {
   const results = () => {
@@ -9,7 +9,7 @@ const Card = (formResults) => {
 
   return (
     <section>
-      <img src={formResults.formResults.name.img_url} width={200} alt={formResults.formResults.name} />
+      <img src={formResults.formResults.img_url} width={200} alt={formResults.formResults.name} />
       <p>Nombre: {formResults.formResults.name}</p>
       <p>Email: {formResults.formResults.email}</p>
       <p>Edad: {formResults.formResults.age}</p>
